@@ -1,0 +1,22 @@
+<div>
+    <table border="1">
+      <tr *ngFor="let per of parr">
+          <td>{{per.id}}</td>
+          <td>{{per.name}}</td>
+          <td>{{per.sal}}</td>
+		  <td><a href="#"><span (click)="deletePer(per)">delete</span></a>/<a href="#"><span (click)="editPerson(per)">edit</span></a></td>
+    </tr>
+    </table>
+	<div *ngIf="flag">
+	<form>
+	   Id : <input type="text" name="id" [(ngModel)]="p1.id" disabled><br>
+	   Name: <input type="text" name="name" [(ngModel)]="p1.name"><br>
+	   Sal: <input type="text" name="sal" [(ngModel)]="p1.sal"><br>
+	   <input type="submit" name="btn" value="update Person" (click)="updatePer(p1)" >
+	</form>
+	</div>
+	<hr>
+	<div>
+	   <pform></pform>
+	<div>
+</div>

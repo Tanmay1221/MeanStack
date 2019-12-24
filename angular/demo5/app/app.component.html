@@ -1,0 +1,16 @@
+<div>
+<form #myfrm="ngForm">
+  <input type="text" #mynm="ngModel" name="nm" ngModel required minlength="3">
+  <div *ngIf="mynm.errors && (mynm.touched || mynm.dirty)">
+   <div [hidden]="!mynm.errors.required">
+      Pls enter valid data it cannot be empty
+   </div>
+   <div [hidden]="!mynm.errors.minlength">
+      min length should be >=3
+   </div>
+     
+  </div>
+  <input type="submit" name="btn" value="submit" [disabled]="!myfrm.valid">
+  
+</form>
+</div>

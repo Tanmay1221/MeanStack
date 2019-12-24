@@ -1,0 +1,14 @@
+<div>
+<form>
+   <input type="text" name="id" [(ngModel)]="pid"><br>
+   <input type="text" name="nm" [(ngModel)]="name"><br>
+   <input type="text" name="sal" [(ngModel)]="sal"><br>
+   <input type="submit" name="btn" value="submit" (click)="displayData()">
+</form>
+<div *ngIf="flag">
+Id : {{pid}}<br>
+Name : {{name}}<br>
+Salary : {{sal}}<br>
+</div>
+
+</div>
